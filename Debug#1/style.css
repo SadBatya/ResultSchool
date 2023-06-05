@@ -4,6 +4,27 @@
   background: url(./img/matrix.jpeg);
   background-size: contain;
 }
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+}
+
+button{
+  width: 150px;
+  height: 40px;
+  background-color: bisque;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  font-size: 14px;
+  border: none;
+}
+
+a{
+  text-decoration: none;
+}
 
 .code__window{
   margin: 0 auto;

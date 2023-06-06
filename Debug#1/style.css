@@ -1,4 +1,5 @@
 .wrapper{
+  height: 1080px;
   font-family: 'Noto Sans', sans-serif;
   margin: 0 auto;
   background: url(./img/matrix.jpeg);
@@ -13,6 +14,7 @@ header{
 }
 
 button{
+  cursor: pointer;
   width: 150px;
   height: 40px;
   background-color: bisque;
@@ -23,6 +25,7 @@ button{
 }
 
 a{
+  color: white;
   text-decoration: none;
 }
 
@@ -30,12 +33,12 @@ a{
   margin: 0 auto;
   color: white;
   width: 800px;
-  height: 100vh;
   background-color: rgb(147, 146, 146);
 }
 
 .code__text{
   padding-top: 40px;
+  padding-bottom: 20px;
   font-size: 20px;
   width: 700px;
   margin: 0 auto;
@@ -54,6 +57,7 @@ p{
 
 img{
   margin-top: 10px;
+  max-width: 600px;
 }
 
 img:last-child{

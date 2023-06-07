@@ -80,15 +80,11 @@ for (let i = 0; i < numbers.length; i += 1) {
 }
 console.log(sum); // 1158411
 
-
+sum = 0
 // я не особо понял эту задачу, но когда локально
-// объявляю переменную внутри фукнции - все начинает
-// работать
 // Через цикл for of
 for (let num of numbers){
-    let sum;
-    num = num ** 3;
-    sum += num;
+    sum += num ** 3;
 } 
 console.log(sum); // 1158411
 

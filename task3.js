@@ -1,3 +1,4 @@
+//Решение с помощью цикла for
 function getDivicorCount(number){
   let array = [];
  
@@ -19,3 +20,4 @@ function getDivicorCount(number){
   return array
 }
 console.log(getDivicorCount(11))
+

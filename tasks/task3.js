@@ -1,10 +1,8 @@
-const salariesDevelopers = [400, 500, 600, 2000, 350];
+const coffees = ['Latte', 'Cappuccino', 'Americano'];
 
-//map
-const updatedSalaries = salariesDevelopers.map((salary) => {
-  return salary ** 2;
-});
+// let coffeeName = prompt('Поиск по название кофе:')
+let coffeeName = 'latte'
 
-//filter
-
-console.log('updatedSalaries', updatedSalaries);
+coffees.forEach((coffes) => {
+  let findIndex = 
+})

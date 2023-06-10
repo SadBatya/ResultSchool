@@ -46,3 +46,12 @@ const somdeIndex2 = salariesDevelopers.every((salary) =>{
 
 console.log('someIndex', somdeIndex)
 console.log('someIndex2', somdeIndex2)
+
+//reduce
+
+const sum = salariesDevelopers.reduce((acc, salary, index, array) => {
+  console.log('acc', acc, salary)
+  return acc + salary;
+}, 0)
+
+console.log(sum)

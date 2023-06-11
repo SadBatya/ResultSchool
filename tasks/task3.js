@@ -1,18 +1,16 @@
-const coffees = ['Latte', 'Cappuccino', 'Americano'];
+const goals = [8, 1, 1, 3, 2, -1, 5];
 
-// let coffeeName = prompt('Поиск по название кофе:')
-let coffeeName = 'latte'
-
-//находим индекс данного кофе к массиве
-let findCoffeeIndex = coffees.findIndex((coffees) => coffeeName.toLowerCase() === coffees.toLowerCase())
-
-//выполняем условие if else
-if(findCoffeeIndex === -1){
-  console.log('Такого кофе нет')
-}else if(findCoffeeIndex >= 0){
-  console.log(`Держите ваш любимый ${coffeeName}. Он ${findCoffeeIndex + 1} - ой по популярности в нашей кофейне`)
-}
+const bestMatchNumber = goals.sort((a, b) => b - a)[0];
+const bestMatchIndex = goals.indexOf(bestMatchNumber) + 1
+const badMatchNumber = Math.min(...goals);
+const badMatchIndex = goals.indexOf(badMatchNumber) + 1
+const goalsSum = goals.reduce((acc, number) => acc + number)
+const mediumGoalsScore = goalsSum/2;
+const sortGoals = goals.sort((a, b) => a - b).join(', ')
 
 
-
-
+console.log(`Самый результатиxвный матч был под номером ${bestMatchIndex} в нем было забито ${bestMatchNumber} голов`)
+console.log(`Самый результативный матч был под номером ${badMatchIndex} в нем было забито ${badMatchNumber} голов`)
+console.log(`Общее количество голов за сезон равно ${goalsSum}`)
+console.log(`Среднее количество голов за матч равно ${mediumGoalsScore}`)
+console.log(sortGoals)

@@ -18,3 +18,19 @@ console.log(`${firstPeopleWhoDidNotReceivePackage} и ${otherPeople} не пол
 console.log(`В очереди ${peopleWaiting.length} человек`)
 
 
+//решение от ментора
+const giveParcel = () => {
+  const man = peopleWaiting.shift()
+  console.log(man, 'got parcel')
+}
+
+
+const leaveQueueWithoutParcel = () => {
+  const manWithoutParcel = peopleWaiting.pop()
+  console.log(manWithoutParcel, 'did not parcel')
+}
+
+giveParcel()
+console.log(peopleWaiting)
+leaveQueueWithoutParcel()
+console.log(peopleWaiting)

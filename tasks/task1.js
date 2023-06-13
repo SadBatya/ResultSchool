@@ -1,41 +1,20 @@
-const users = [
-  {
-    username: 'David',
-    status: 'online',
-    lastActivity: 10,
-  },
-  {
-    username: 'Lucy',
-    status: 'offline',
-    lastActivity: 22,
-  },
-  {
-    username: 'Bob',
-    status: 'online',
-    lastActivity: 104,
-  },
-];
+getDateFormat = (date, separator) => {
+  let newDate = new Date()
+  let year = newDate.getFullYear()
+  let month = newDate.getMonth()
+  let day = newDate.getDate()
 
-//В данном массиве будет хранится полная информация пользователя онлайн
-const userInfo = []
-
-//В этом массиве будут имена пользователей которые онлайн
-const onlineUsers = []
-
-users.forEach((users) => {
-  if(users.status === 'online'){
-    userInfo.push(users)
-    onlineUsers.push(users.username)
+  if(day < 10){
+    day = '0' + day
+  }else if(month < 10){
+    month = '0' + month
   }
-})
 
-console.table(userInfo)
-console.log(`Сейчас в онлайн следующие пользователи ${onlineUsers.join(', ')}`)
+  date = day + '.' + month + '.' + year
+  if(separator === '-'){
+    date = day + '-' + month + '-' + year
+  }
+  return(date)
+}
 
-//второе рещение с помощью цикла for
-
-// for(let key of users){
-//   if(key.status === 'online'){
-//     onlineUsers.push(key.username)
-//   }
-// }
+console.log(getDateFormat(null, '-'))

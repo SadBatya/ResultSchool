@@ -1,7 +1,7 @@
 getDateFormat = (date, separator) => {
   let newDate = new Date()
   let year = newDate.getFullYear()
-  let month = newDate.getMonth()
+  let month = newDate.getMonth() + 1
   let day = newDate.getDate()
 
   if(day < 10){
@@ -17,4 +17,5 @@ getDateFormat = (date, separator) => {
   return(date)
 }
 
+console.log(getDateFormat())
 console.log(getDateFormat(null, '-'))

@@ -8,22 +8,16 @@ const people = [
 ];
 
 
-const result = []
 
-people.forEach((name, peopleIndex) => {
-  ordersArr.forEach((value, Ordersindex) => {
-    if(peopleIndex === Ordersindex){
-      name.peopleIndex = value;
-      result.push(people)
-      
-    }
-  })
-})
+function giveTalonsInOrder(people, ordersArr){
+  const obj = {}
+  people.forEach((e, i) => obj[e.id] = i)
+  return ordersArr.map(id => people[obj[id]])
+}
 
 
 
+console.log(giveTalonsInOrder(people, ordersArr)) 
 
-
-console.log(result)
 
 

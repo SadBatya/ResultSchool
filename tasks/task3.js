@@ -1,17 +1,12 @@
-// addDays = (date, days) => {
-//  let dateNow = Number(date)
-//  let dateNow2 = new Date()
-//  let dateNow3 = (`${dateNow2.getFullYear()} .${dateNow2.getDay()} . ${dateNow2.getMonth()}`)
-
-//  console.log(date)
-//  console.log(dateNow2)
-//  console.log(dateNow3)
-//  console.log(typeof dateNow)
-// }
-
-addDays = (date, days) => {
-  let newDate = Date.now(new Date(date))
-  console.log(newDate)
+function addDays(date, days) {
+  return new Date(date.getTime() + days * 86400000);  
 }
 
-addDays('05.05.2021', 1)
+//второй вариант решения
+function addDays2(date, days){
+  return new Date(Date.now(date) + days * 86400000)
+}
+
+
+console.log(addDays(new Date(), 2));
+console.log(addDays2(new Date(), 2));

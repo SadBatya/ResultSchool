@@ -10,7 +10,7 @@ let findCoffeeIndex = coffees.findIndex((coffees) => coffeeName.toLowerCase() ==
 if(findCoffeeIndex === -1){
   console.log('Такого кофе нет')
 }else if(findCoffeeIndex >= 0){
-  console.log(`Держите ваш любимый ${coffeeName}. Он ${findCoffeeIndex + 1} - ой по популярности в нашей кофейне`)
+  console.log(`Держите ваш любимый ${coffees[findCoffeeIndex]}. Он ${findCoffeeIndex + 1} - ой по популярности в нашей кофейне`)
 }
 
 

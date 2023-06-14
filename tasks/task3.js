@@ -10,3 +10,8 @@ function addDays2(date, days){
 
 console.log(addDays(new Date(), 2));
 console.log(addDays2(new Date(), 2));
+
+let a = ''
+let b = 2
+console.log(Boolean(a))
+console.log(Boolean(b))

@@ -11,7 +11,6 @@
 
 addDays = (date, days) => {
   let newDate = Date.now(new Date(date))
-  let futureDate = newDate + 
   console.log(newDate)
 }
 

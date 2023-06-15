@@ -4,35 +4,27 @@ const student = {
 }
 
 
-// handleObject = (obj, key, action) => {
-//   const userKey = key;
-//   if(action === 'add'){
-//     obj.userKey = '';
-//     return student
-//   }else if(action === 'delete'){
-//     delete obj.userKey
-//   }else(action === 'get'){
-//     obj.userKey
-//   }
-// }
+handleObject = (obj, key, action) => {
+  if(action === 'get'){
+    return console.log(obj[key])
+  }else if(action === 'add'){
+    obj.key = ''
+  }else if(action === 'delete'){
+    delete obj[key]
+  }else{
+    return obj
+  }
+}
+handleObject(student, 'name', 'get')
 
-// function handleObject(obj, key, action){
-//   if(action === 'add'){
-//     Object.keys(student)
-//   }
-// }
+handleObject(student, 'age', 'add')
+console.log(student)
 
-// handleObject = (obj, key, action) => {
-//   if(action === 'add'){
-//     obj.value = key
-//   }else if(action === 'delete')[
-//     delete obj.value = key
-//   ]
-// }
+handleObject(student, 'name', 'delete')
+console.log(student)
 
 
 
 
 
-const result = handleObject(student, 'programmingLanguage', 'delete');
-console.log('result', result); // { name: 'Maxim' }
+

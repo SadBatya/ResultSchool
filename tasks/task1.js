@@ -1,21 +1,26 @@
-getDateFormat = (date, separator) => {
-  let newDate = new Date()
-  let year = newDate.getFullYear()
-  let month = newDate.getMonth() + 1
-  let day = newDate.getDate()
-
-  if(day < 10){
-    day = '0' + day
-  }else if(month < 10){
-    month = '0' + month
+const groceries = {
+  "73Wakv": {
+    name: "Orange Juice",
+    price: 1.5,
+    discount: 10
+  },
+  "5L3db9": {
+    name: "Chocolate",
+    price: 2,
+    discount: 0
   }
+  // more items...
+};
 
-  date = day + '.' + month + '.' + year
-  if(separator === '-'){
-    date = day + '-' + month + '-' + year
+ const productsArray = [
+  {
+    productId: 1,
+    count: 3,
   }
-  return(date)
+]
+
+
+
+getTotalPriceOfShoppingBag = (shoppingBagArray) => {
+
 }
-
-console.log(getDateFormat())
-console.log(getDateFormat(null, '-'))

@@ -11,11 +11,12 @@ getDateFormat = (date, separator) => {
   }
 
   date = day + '.' + month + '.' + year
-  if(separator === '-'){
-    date = day + '-' + month + '-' + year
+  if(separator !== undefined){
+    date = day + separator + month + separator + year
   }
   return(date)
 }
+
 
 console.log(getDateFormat())
 console.log(getDateFormat(null, '-'))

@@ -12,15 +12,53 @@ const groceries = {
   // more items...
 };
 
- const productsArray = [
-  {
-    productId: 1,
-    count: 3,
-  }
-]
+let globalPrice = Object.values(groceries).forEach((name) => {
+  return name.price
+})
+
+console.log(globalPrice)
 
 
 
-getTotalPriceOfShoppingBag = (shoppingBagArray) => {
+// console.log(globalPrice)
+// let globalDiscount = Object.values(groceries).forEach((name) => {
+//   name.discount
+// })
 
-}
+
+
+
+
+// let b = Object.values(a)
+// b.forEach((name) => {
+//   console.log(name.price)
+//   console.log(name.discount)
+// })
+
+// getTotalPriceOfShoppingBag = (shoppingBag) => {
+
+// }
+
+
+// getTotalPriceOfShoppingBag = (shoppingBag) => {
+//   shoppingBag.forEach((value) => {
+//     if(value.productId === groceries.productId){
+//       console.log(1)
+//     }
+//   })
+// }
+
+
+// getTotalPriceOfShoppingBag = (shoppingBag) => {
+//   let sum = 0;
+//   shoppingBag.forEach((obj) => {
+//     for(let key in groceries){
+//       let id = key.productId
+//       if(obj.productId === key){
+//         console.log(groceries[id])
+//       }
+//     }
+//   })
+// }
+
+// getTotalPriceOfShoppingBag(shoppingBag)

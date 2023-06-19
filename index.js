@@ -59,7 +59,9 @@ const userMuser = {
   getName(){
     return this.name;
   },
-  getProgrammingLanguage(){
+  
+  // у стрелочной функции нет своего this
+  getProgrammingLanguage: function(){
     return this.programmingLanguage
   }
 }
@@ -70,3 +72,6 @@ console.log(userMuser.getName())
 const newGetName = userMuser.getName
 
 console.log(newGetName.call(userMuser)) // он теряет контекст так как ссылается на глобальный объект window
+
+//Второй случай потери контекста
+console.log(userMuser.getProgrammingLanguage())

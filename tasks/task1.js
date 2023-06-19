@@ -3,7 +3,7 @@ getDateFormat = (date, separator) => {
   let year = newDate.getFullYear()
   let month = newDate.getMonth() + 1
   let day = newDate.getDate()
-
+  
   if(day < 10){
     day = '0' + day
   }else if(month < 10){

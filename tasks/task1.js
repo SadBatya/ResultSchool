@@ -1,72 +1,44 @@
-const student = {
-  stack: ['HTML'],
-  level: 1,
-  improveLevel() {
-    this.level += 1
+// function Student(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   this.technologies = [];
+//   this.status = 'Junior';
 
-    //Решение с помощью switch
-    switch(this.level){
-      case 1:
-        console.log(student.stack)
-        break;
-      case 2:
-        this.stack.push('CSS')
-        break;
-      case 3:
-        this.stack.push('JavaScript')
-        break;
-      case 4:
-        this.stack.push('React')
-        break;
-      case 5:
-        this.stack.push('NodeJS')
-        break;
-      default: 
-        console.log('Студент выучил все технологии')
-    }
+//   this.setTechnologies = function(technologies) {
+//     this.technologies = [
+//       ...this.technologies,
+//       ...technologies,
+//     ];
+// }
+//   this.setNewStatus = function(newStatus) {
+//     this.status = newStatus;
+//   }
+// }
 
 
-    //Решение с помощью if else
 
-    // if(this.level === 1){
-    //   console.log(student)
-    // }else if(this.level === 2){
-    //   this.stack.push('CSS')
-    // }else if(this.level === 3){
-    //   this.stack.push('JavaScript')
-    // }else if(this.level === 4){
-    //   this.stack.push('React')
-    // }else if(this.level === 5){
-    //   this.stack.push('NodeJS')  
-    // }else if(this.level > 5){
-    //   return console.log('Студент выучил все технологии')
-    // }
+class Student{
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+    this.technologies = [];
+    this.status = 'Junior';
+  }
+
+  setTechnologies(technologies){
+    this.technologies = [
+          ...this.technologies,
+          ...technologies,
+    ];
+  }
+
+  setNewStatus(newStatus) {
+    this.status = newStatus;
   }
 }
 
-student.improveLevel()
-// console.log(student)
-console.log(student.stack)//[HTML, CSS]
 
-
-student.improveLevel()
-// console.log(student)
-console.log(student.stack)//[HTML, CSS, JavaScript]
-
-
-student.improveLevel()
-// console.log(student)
-console.log(student.stack)//[HTML, CSS, JavaScript, React]
-
-
-
-student.improveLevel()
-// console.log(student)
-console.log(student.stack)// [HTML, CSS, JavaScript, React, NodeJs]
-
-student.improveLevel()// Студент все выучил все технологии
-
-
-
-
-
+const student = new Student ('Maxim', 20);
+student.setTechnologies([ 'HTML', 'CSS', 'JavaScript' ]);
+student.setNewStatus('Middle');
+console.log(student);

@@ -12,11 +12,29 @@ const groceries = {
   // more items...
 };
 
-let globalPrice = Object.values(groceries).forEach((name) => {
-  return name.price
-})
 
-console.log(globalPrice)
+
+function getTotalPriceOfShoppingBag(shoppingBag) {
+  console.log(bag)
+
+  let sum = 0;
+  shoppingBag.forEach(product) => {
+    const cost = groceries[productId];
+    sum += product.count
+
+  })
+
+  
+}
+
+const shoppingBag = [
+  { productId: "73Wakv", count: 3 },
+  { productId: "5L3db9", count: 23 }
+];
+
+const totalPrice = getTotalPriceOfShoppingBag(shoppingBag);
+console.log("totalPrice", totalPrice); // Возвращает 50.05
+
 
 
 

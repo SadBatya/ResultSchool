@@ -10,7 +10,6 @@ class Person{
       return console.log(`${this.name} младше, чем ${person.name}`)
     }
   }
-
 }
 
 const person1 = new Person('Максим', 24);

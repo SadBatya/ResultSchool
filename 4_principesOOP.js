@@ -53,3 +53,6 @@ console.log(militaryPlane instanceof Dog)// False
 // console.log(plane)
 // plane.startFlight()
 // plane.setNumberOfGuns()
+
+
+

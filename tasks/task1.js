@@ -1,38 +1,51 @@
-// function Student(name, age) {
-//   this.name = name;
-//   this.age = age;
-//   this.technologies = [];
-//   this.status = 'Junior';
+const attacker = {
+  archer: 30,
+  footSoldier: 55,
+  cavalry: 10,
+  artillery: 3,
+  
+  
+  checkChancesToWin(defenderObject) {
+    let chanceArray = [0, 4]
+    for(let keyAttack in attacker){
+      for(let keyDefender in defender){
+        if(attacker[keyAttack] > defender[keyDefender]){
+          chanceArray[0] += 1
+        }
+      }
+      return chanceArray
+    }
+  },
 
-//   this.setTechnologies = function(technologies) {
-//     this.technologies = [
-//       ...this.technologies,
-//       ...technologies,
-//     ];
-// }
-//   this.setNewStatus = function(newStatus) {
-//     this.status = newStatus;
-//   }
-// }
+  improveArmy(){
+    this.archer += 5,
+    this.footSoldier += 5,
+    this.cavalry += 5,
+    this.artillery += 5
+  },
 
-class Student {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-    this.technologies = [];
-    this.status = 'Junior';
+  attack(defender){
+    let chance = this.checkChancesToWin()
+    chance[0]/chance[1] * 100
+    if(chance < 70){
+      console.log(`Наши шансы равны ${this.chance[0]}/${this.chance[1]}.Необходимо укрепление!`)
+      this.improveArmy()
+    }else{
+      console.log('Мы усилились! Мы несомненно победим! Наши шансы высоки!')
+    }
   }
+};
 
-  setTechnologies(technologies) {
-    this.technologies = [...this.technologies, ...technologies];
-  }
+const defender = {
+  archer: 33,
+  footSoldier: 50,
+  cavalry: 40,
+  artillery: 10,
+};
 
-  setNewStatus(newStatus) {
-    this.status = newStatus;
-  }
-}
 
-const student = new Student('Maxim', 20);
-student.setTechnologies(['HTML', 'CSS', 'JavaScript']);
-student.setNewStatus('Middle');
-console.log(student);
+console.log(Object.values(attacker))
+console.log(attacker.improveArmy())
+console.log(Object.values(attacker))
+console.log(attacker.checkChancesToWin())
+console.log(attacker.attack(attacker))

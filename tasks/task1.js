@@ -44,8 +44,7 @@ const defender = {
   artillery: 10,
 };
 
-console.log(Object.values(attacker));
-console.log(attacker.improveArmy());
-console.log(Object.values(attacker));
-console.log(attacker.checkChancesToWin());
-console.log(attacker.attack(attacker));
+console.log(attacker.attack(defender))// Наши шансы равны 1/4. Необходимо укрепление! 
+console.log(attacker.attack(defender))// Наши шансы равны 2/4. Необходимо укрепление! 
+console.log(attacker.attack(defender))// Наши шансы равны 2/4. Необходимо укрепление! 
+console.log(attacker.attack(defender))// Мы усилились! Мы несомненно победим! Наши шансы высоки!

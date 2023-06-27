@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css" />
+  <title>Работа с DOM</title>
+</head>
+<body>
+  <div class="main-navigation">
+    <a
+      class="main-navigation__button-item"
+      href="#tasks_today"
+      data-button-id="1"
+    >
+      Задачи на Сегодня
+    </a>
+    <a
+      class="main-navigation__button-item"
+      href="#tasks_week"
+      data-button-id="2"
+    >
+      Задачи на Эту Неделю
+    </a>
+    <a
+      class="main-navigation__button-item"
+      href="#tasks_later"
+      data-button-id="3"
+    >
+      Задачи на Потом
+    </a>
+  </div>
+  <div id="tasks">
+    <div class="tasks__wrapper">
+      <form class="create-task-block">
+        <input
+          name="taskName"
+          class="create-task-block__input default-text-input"
+          type="text"
+          placeholder="Создайте новую задачу"
+          value="Посмотреть урок по JavaScript"
+        >
+        <button
+          type="submit"
+          class="create-task-block__button default-button"
+        >
+          Создать
+        </button>
+      </form>
+      <div class="tasks-list">
+        <div class="task-item" data-task-id="1">
+          <div class="task-item__main-container">
+            <div class="task-item__main-content">
+              <form class="checkbox-form">
+                <input class="checkbox-form__checkbox" type="checkbox" id="task-1">
+                <label for="task-1"></label>
+              </form>
+              <span class="task-item__text">Посмотреть новый урок по JavaScript</span>
+            </div>
+            <button class="task-item__delete-button default-button delete-button" data-delete-task-id="5">
+              Удалить
+            </button>
+          </div>
+        </div>
+
+        <div class="task-item" data-task-id="2">
+          <div class="task-item__main-container">
+            <div class="task-item__main-content">
+              <form class="checkbox-form">
+                <input class="checkbox-form__checkbox" type="checkbox" id="task-2">
+                <label for="task-2"></label>
+              </form>
+              <span class="task-item__text">Сделать ДЗ к уроку по JavaScript</span>
+            </div>
+            <button class="task-item__delete-button default-button delete-button" data-delete-task-id="5">
+              Удалить
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./html-elements-methods.js"></script>
+  <!-- <script src="./html-elements-properties.js"></script> -->
+  <!-- <script src="./script.js"></script>
+  <script src="5_event-delegation.js"></script> -->
+</body>
+</html>

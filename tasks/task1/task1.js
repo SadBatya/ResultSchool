@@ -2,6 +2,7 @@ const container = document.querySelector('body')
 const form = document.createElement('form')
 const button = document.createElement('button')
 button.type = 'submit'
+button.innerHTML = 'зарегистрироваться'
 
 
 const labelName = document.createElement('label')

@@ -1,5 +1,7 @@
 const taskList = document.querySelector('.tasks-list')
 const form = document.querySelector('.create-task-block')
+const errorMessage = document.querySelector('.error-message-block')
+
 form.addEventListener('submit', (event) => {
   event.preventDefault()
   const taskList = document.querySelector('.tasks-list')
@@ -15,6 +17,6 @@ form.addEventListener('submit', (event) => {
     divTask.innerHTML = inputValue
     taskList.append(divTask)
   }else{
-    alert('Введите правильно задачу')
+    alert('Введите правильно значение!')
   }
 })

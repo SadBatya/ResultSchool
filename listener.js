@@ -10,7 +10,7 @@ const allNavButton = document.querySelectorAll('.main-navigation__button-item')
 allNavButton.forEach((button) => {
   button.addEventListener('click', (event) => {
     allNavButton.forEach((button) => {
-      button.classList.remove(main-navigation__button-item_selected')
+      button.classList.remove('main-navigation__button-item_selected')
     })
     const { target } = event;
     target.classList.add('main-navigation__button-item_selected')
@@ -19,6 +19,14 @@ allNavButton.forEach((button) => {
 
 // submit 
 const createTaskForm = document.querySelector('.create-task-block')
-createTaskForm.addEventListener('sumbit', (event) => {
-  console.log(event)
+createTaskForm.addEventListener('submit', (event) => {
+  event.preventDefault()
+  const { target } = event
+  const taskNameInput = target.taskName
+  const inputValue = taskNameInput.value
+  if(inputValue){
+    alert(`Вы создали задачу ${inputValue}`)
+  }else{
+    alert('Введите правильные данные')
+  }
 })

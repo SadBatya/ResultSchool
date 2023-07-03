@@ -114,7 +114,7 @@ document.addEventListener('contextmenu', (event) => {
 // события для инпута change и input
 // input срабатывает тогда, когда мы сразу вводим символ в инпут
 
-const checkTaskNameInputOnValidatio = (value) => {
+const checkTaskNameInputOnValidation = (value) => {
   if(!value || value.includes('@')){
     return false
   }
@@ -128,7 +128,7 @@ taskNameInput.addEventListener('change', (event) => {
   console.log(event)
   const { target } = event
   const { value } = target
-  const isValid = checkTaskNameInputOnValidatio(value)
+  const isValid = checkTaskNameInputOnValidation(value)
   const messageBlockFromDom = document.querySelector('.error-message-block')
   if(!isValid){
     const newMessageBlock = document.createElement('span')

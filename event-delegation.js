@@ -4,6 +4,7 @@ const allNavigationButton = document.querySelectorAll(
 );
 
 // с помощью данного кода ставиться слушатель на кажду кнопку
+
 // allNavigationButton.forEach((button) => {
 //   button.addEventListener('click', (event) => {
 //     const targetButton = event.target
@@ -13,6 +14,7 @@ const allNavigationButton = document.querySelectorAll(
 //     targetButton.classList.add('main-navigation__button-item_selected')
 //   })
 // })
+
 
 //поэтому нужно использовать делегирование событый и работать с родителем элементов
 

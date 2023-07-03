@@ -1,6 +1,7 @@
 const createTaskBlock = document.querySelector('.create-task-block');
 const taskList = document.querySelector('.tasks-list');
 const submitBtn = document.querySelector('.create-task-block__button')
+
 let toDos = []
 
 
@@ -37,14 +38,6 @@ createTaskBlock.addEventListener('submit', (event) => {
   
 
   if (inputValue) {
-    toDos.forEach((value) => {
-      if(inputValue === value){
-        alert('Задача с таким именем уже существует')
-      }
-      return false
-    })
-
-    
     alert(`Вы добавили задачу: ${inputValue}`);
     toDos.push(inputValue)
     const divTask = document.createElement('div');
@@ -69,5 +62,16 @@ createTaskBlock.addEventListener('submit', (event) => {
   } else {
     alert(`Введите задачу`);
   }
+  console.log(toDos)
 });
+
+
+taskList.addEventListener('click', (event) => {
+  console.log('Клик на контейнер')
+  const deleteButton = event.target.closest('.delete-button')
+  if(deleteButton){
+    
+  }
+})
+
 

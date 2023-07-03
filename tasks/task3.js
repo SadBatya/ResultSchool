@@ -5,7 +5,7 @@ constructor(name) {
   }
 
   add(word, description) { 
-    if(this.words[word] === word){
+    if(this.words[word] !== word){
       return
     }else{
       this.words[word] = {

@@ -102,3 +102,44 @@ document.addEventListener('mouseout', (event) => {
 document.addEventListener('mousemove', (event) => {
   console.log(event)
 })
+
+
+// contextmenu - срабатывает, когда мы открываем меню правой кнопкой мыши
+document.addEventListener('contextmenu', (event) => {
+  console.log(event)
+  event.preventDefault()
+})
+
+
+// события для инпута change и input
+// input срабатывает тогда, когда мы сразу вводим символ в инпут
+
+const checkTaskNameInputOnValidatio = (value) => {
+  if(!value || value.includes('@')){
+    return false
+  }
+  return true
+}
+
+
+const createTaskBlock = document.querySelector('.create-task-block')
+const taskNameInput = createTaskBlock.querySelector('.create-task-block__input')
+taskNameInput.addEventListener('change', (event) => {
+  console.log(event)
+  const { target } = event
+  const { value } = target
+  const isValid = checkTaskNameInputOnValidatio(value)
+  const messageBlockFromDom = document.querySelector('.error-message-block')
+  if(!isValid){
+    const newMessageBlock = document.createElement('span')
+    newMessageBlock.className = 'error-message-block'
+    newMessageBlock.textContent = 'Ошибка! Текст для задачи не должен быть пустым и не должен содержать "@" '
+    createTaskBlock.append(newMessageBlock)
+  }else if(isValid && messageBlockFromDom){
+    messageBlockFromDom.remove()
+  }
+})
+
+
+
+

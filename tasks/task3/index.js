@@ -1,8 +1,9 @@
 const createTaskBlock = document.querySelector('.create-task-block');
 const taskList = document.querySelector('.tasks-list');
 const submitBtn = document.querySelector('.create-task-block__button')
+let toDos = []
 
-console.log(taskList);
+
 const checkTaskNameInputOnValidation = (value) => {
   if (!value || value.includes('@')) {
     return false;
@@ -27,13 +28,25 @@ createTaskBlock.addEventListener('change', (event) => {
   }
 });
 
+
 createTaskBlock.addEventListener('submit', (event) => {
   event.preventDefault();
   const { target } = event;
   const taskNameInput = target.taskName;
   const inputValue = taskNameInput.value;
+  
+
   if (inputValue) {
+    toDos.forEach((value) => {
+      if(inputValue === value){
+        alert('Задача с таким именем уже существует')
+      }
+      return false
+    })
+
+    
     alert(`Вы добавили задачу: ${inputValue}`);
+    toDos.push(inputValue)
     const divTask = document.createElement('div');
     divTask.className = 'task-item';
     divTask.dataset.taskId = Date.now();
@@ -57,3 +70,4 @@ createTaskBlock.addEventListener('submit', (event) => {
     alert(`Введите задачу`);
   }
 });
+

@@ -1,12 +1,13 @@
 const salariesDevelopers = [400, 500, 600, 2000, 350];
 
-//map
+//map - возвращает новый массив
 const updatedSalaries = salariesDevelopers.map((salary) => {
   return salary ** 2;
 });
 
 console.log('updatedSalaries', updatedSalaries);
-//filter
+
+//filter - 
 const filterSalaries = salariesDevelopers.filter((salary) => {
   return salary % 2 === 0;
 })
@@ -17,7 +18,6 @@ console.log('filterSalaries', filterSalaries);
 
 
 //find
-
 const searchedSalary = salariesDevelopers.find((salaries) => {
   return salaries > 500;
 });
@@ -113,3 +113,47 @@ const allDeveloper = [
 ]
 
 console.log(allDeveloper)
+
+
+
+let newArray = [2,6,7,8,4,3,45,5]
+
+const newAr1 = newArray.map(number => {
+  return number * 2
+})
+const newAr2 = newArray.filter(value => {
+  return value % 2 === 0
+})
+const newAr3 = newArray.find((value) => {
+  return value === 3
+})
+const newAr4 = newArray.findIndex((value) => {
+  return value === 8
+})
+const newAr5 = newArray.some((value) => {
+  return value === 0
+})
+const newAr6 = newArray.every((value) => {
+  return value < 0
+})
+
+const sumNumbers = newArray.reduce((num, acc) => {
+  return acc += num
+},0)
+
+const sortNumbers = newArray.sort((a, b) => {
+  return a - b
+})
+
+console.log(newAr1)
+console.log(newAr2)
+console.log(newAr3)
+console.log(newAr4)
+console.log(newAr5)
+console.log(newAr6)
+console.log(sumNumbers)
+console.log(sortNumbers)
+
+
+
+

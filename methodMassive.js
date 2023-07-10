@@ -70,13 +70,11 @@ console.log(agesOfDevelopers.slice(0,2))
 console.log(agesOfDevelopers)
 
 //indexOf
-
 const favoriteFood = ['Мороженое','Торт','Кофе']
 const indexOfFood = favoriteFood.indexOf('торт');
 console.log(indexOfFood)
 
 //includes
-
 const technologue = ['JavaScript', 'HTML', 'CSS']
 const technologueExist = technologue.includes('CSS')
 console.log(technologueExist)
@@ -95,18 +93,15 @@ console.log(ordersString)
 technologue.reverse()
 console.log(technologue) 
 
-//Обединение массивов в один массив
-
+//Объединение массивов в один массив
 const currentDevelopers = ['Maxim', 'Oleg']
 const newDevelopers = ['Anton', 'Gleb']
 
-//для обхединения массмвов есть метод concat
-
+//для объединения массивов есть метод concat
 const allDevelopers = currentDevelopers.concat(newDevelopers)
 console.log(allDevelopers)
 
 //Второй способ можно использовать spread оператор
-
 const allDeveloper = [
   ...currentDevelopers,
   ...newDevelopers,

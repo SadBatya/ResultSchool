@@ -1,0 +1,26 @@
+{
+  "name": "webpackandrollup",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    
+    "dev": "rollup -c -w",
+    "prod": "rollup -c"
+  },
+  "keywords": [
+    "WebPack",
+    "rollup"
+  ],
+  "author": "Vladimir Skripnik",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.10",
+    "@rollup/plugin-babel": "^6.0.3",
+    "rollup-plugin-img": "^1.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-serve": "^2.0.2",
+    "rollup-plugin-styles": "^4.0.0"
+  }
+}

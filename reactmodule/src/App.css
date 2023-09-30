@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.content{
+  display: none;
+}
+
+input[type='checkbox']:checked + .content {
+  display: block;
+}
+.validation {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+.select{
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+}

@@ -1,51 +1,62 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import { AppContext } from './context'
-import User from './User'
+import React from 'react';
+import { useState, useEffect, useReducer } from 'react';
+import { AppContext } from './context';
+import User from './User';
 
 const userInfo = () => ({
   name: 'Vladimir',
   age: 25,
-  email: 'sadbatya@mail.ru'
-})
+  email: 'sadbatya@mail.ru',
+});
 
 const getAnotherUserInfo = () => ({
   name: 'Kolya',
   age: 28,
-  email: 'kolya@mail.ru'
-})
+  email: 'kolya@mail.ru',
+});
 
 export default function App() {
-
-  const [userData, setUserData] = useState({})
-  useEffect(() => {
-    const userData = userInfo()
-    setUserData(userData)
-  }, [])
+  const [userData, dispatch] = useReducer(reducer, {});
   
-  const dispatch = (action) => {
-    const { type, payload } = action
+  useEffect(() => {
+    const userData = userInfo();
+    dispatch({ type: 'SET_USER_DATA', payload: userData});
+  }, []);
 
-    switch(type) {
+  const reducer = (state, action) => {
+    const { type, payload } = action;
+
+    switch (type) {
       case 'SET_USER_DATA': {
-        setUserData(payload)
-        break
+        return payload
+      }
+      case 'SET_USER_AGE': {
+        return {
+          ...state,
+          age: payload,
+        };
       }
       default:
+        return state
     }
-  }
+  } 
+
+  const setUserData = (action) => {
+   const newState = reducer(userData, action)
+   dispatch(newState)
+  };
 
   const onUserChange = () => {
-    const anotherUserData =  getAnotherUserInfo()
-    setUserData(anotherUserData)
-  }
+    const anotherUserData = getAnotherUserInfo();
+    dispatch({type: 'SET_USER_DATA', payload: getAnotherUserInfo});
+  };
 
   return (
-      <AppContext.Provider value={{userData, dispatch}}>
-        <h1>Hello!</h1>
-        <User />
-        <span>Кнопка для смены пользователя</span>
-        <button onClick={onUserChange}>Сменить пользователя</button>
-      </AppContext.Provider>
-  )
+    <AppContext.Provider value={{ userData, dispatch }}>
+      <h1>Hello!</h1>
+      <User />
+      <span>Кнопка для смены пользователя</span>
+      <button onClick={onUserChange}>Сменить пользователя</button>
+    </AppContext.Provider>
+  );
 }

@@ -1,0 +1,1 @@
+export const selectEmail = state => state.userState.email

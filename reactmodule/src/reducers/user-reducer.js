@@ -38,7 +38,7 @@ export const userReducer = (state = initialUserState, action) => {
     case 'CHANGE_USER': {
       return {
         ...state,
-        ...action.payload
+        ...action.payload,
       }
     }
 
